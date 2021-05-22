@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>天气预报</title>
+    <link rel="stylesheet" href="./demo.css">
+    <script src="./demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.1.1/dist/echarts.min.js"></script>
+</head>
+<body>
+    
+    <div class="old">
+        <!-- 主背景页面 -->
+    <div class="bgc">
+    <div class="top1">
+        <img src="./fanhui.svg" >
+        <span class="tc">
+            <img src="./定位.svg" style="height: 16px;">
+            <span class="locationName"></span>
+        </span>
+        <img src="./share.svg" class="share">
+    </div>
+
+    <div class="main1">
+        <p class="city" style="display: none;"></p>
+        <p class="temper" style="font-size: 4rem;"></p>
+        <p class="wea" style="font-size: 2rem;"></p>
+        <div class="hw">
+        <p class="humidity" style="font-size: 1rem;"></p>
+        <p class="wind" style="color: #ffffff;"></p>
+        </div>
+    </div>
+    <button class="air"></button>
+    </div>
+    
+  <!-- 今天明天天气状况 -->
+    <div style="margin-top: 2vh;" class="jm">
+        <div>
+            <span>
+            <span style="margin-left: 5vw; ">今天</span>
+            <span class="todTem" style="margin-left: 15vw;"></span>
+            </span>
+            <span>
+            <span class="mingtian">明天</span>
+            <span class="tomTem"></span>
+            </span>
+        </div>
+        <div style="margin-top: 1vh;">
+            <span style="width: 50vw; ">
+            <span class="todWea" style="margin-left:5vw ;" ></span>
+            <span>
+            <img src=""  class="img1">
+            </span>
+            </span>
+            <span>
+            <span  class="tomWea"></span>
+            <span>
+            <img src="" class="img2">
+            </span>
+            </span>
+        </div>
+    </div>
+    <!-- 24h天气状况 -->
+    <section class="everhour">
+        <div style="width: 400%;">
+            <ol>
+                <li class="item" style="width: 4vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+               
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+                <li class="item" style="width: 3.85vh;">
+                    <p class="txt-time"></p>
+                    <img src="" class="icon">
+                    <p class="txt-degree"></p>
+                </li>
+            </ol>
+        </div>
+    </section>
+    <!-- 七天天气状况及echarts -->
+<section class="charts" style="z-index: 20;">
+    <div style="width: 116.7%;">
+           <ol id="ls-days">
+               <li class="item">
+                   <p class="day">今天</p>
+                   <p class="date"></p>
+                   <div class="ct-daytime">
+                       <p class="wea_day"></p>
+                       <img src="" class="icon0">
+                   </div>
+                   <div class="ct-night">
+                       <img src="" class="icon1">
+                       <p class="wea_night"></p>
+                   </div>
+                   <p class="wind"></p>
+                   <p class="wind_speed"></p>
+               </li>
+            <li class="item">
+                <p class="day">明天</p>
+                <p class="date"></p>
+                <div class="ct-daytime">
+                    <p class="wea_day"></p>
+                    <img src="" class="icon0">
+                </div>
+                <div class="ct-night">
+                    <img src="" class="icon1">
+                    <p class="wea_night"></p>
+                </div>
+                <p class="wind"></p>
+                <p class="wind_speed"></p>
+            </li>
+       
+            <li class="item">
+                <p class="day">后天</p>
+                <p class="date"></p>
+                <div class="ct-daytime">
+                    <p class="wea_day"></p>
+                    <img src="" class="icon0">
+                </div>
+                <div class="ct-night">
+                    <img src="" class="icon1">
+                    <p class="wea_night"></p>
+                </div>
+                <p class="wind"></p>
+                <p class="wind_speed"></p>
+            </li>
+        
+            <li class="item">
+                <p class="day"></p>
+                <p class="date"></p>
+                <div class="ct-daytime">
+                    <p class="wea_day"></p>
+                    <img src="" class="icon0">
+                </div>
+                <div class="ct-night">
+                    <img src="" class="icon1">
+                    <p class="wea_night"></p>
+                </div>
+                <p class="wind"></p>
+                <p class="wind_speed"></p>
+            </li>
+       
+            <li class="item">
+                <p class="day"></p>
+                <p class="date"></p>
+                <div class="ct-daytime">
+                    <p class="wea_day"></p>
+                    <img src="" class="icon0">
+                </div>
+                <div class="ct-night">
+                    <img src="" class="icon1">
+                    <p class="wea_night"></p>
+                </div>
+                <p class="wind"></p>
+                <p class="wind_speed"></p>
+            </li>
+        
+            <li class="item">
+                <p class="day"></p>
+                <p class="date"></514p>
+                <div class="ct-daytime">
+                    <p class="wea_day"></p>
+                    <img src="" class="icon0">
+                </div>
+                <div class="ct-night">
+                    <img src="" class="icon1">
+                    <p class="wea_night"></p>
+                </div>
+                <p class="wind"></p>
+                <p class="wind_speed"></p>
+            </li>
+        
+               <li class="item">
+                   <p class="day"></p>
+                   <p class="date"></p>
+                   <div class="ct-daytime">
+                       <p class="wea_day"></p>
+                       <img src="" class="icon0" >
+                   </div>
+                   <div class="ct-night">
+                       <img src="" class="icon1">
+                       <p class="wea_night"></p>
+                   </div>
+                   <p class="wind"></p>
+                   <p class="wind_speed"></p>
+               </li>
+           </ol>
+           <div class="echarts" >
+                
+        </div>
+    </div>
+</section>
+    <!-- 生活指数即建议 -->
+    <div class="tip0">
+        <ul class="tipUl" style="width: 200vw; ">
+        <li  class="tip"> <img src="" class="tipIcon"> <p  class="zhishu-su"></p><p class="zhishu">穿衣</p></li>
+        <li class="tip"> <img src="" class="tipIcon"> <p class="zhishu-su"></p><p class="zhishu">雨伞</p></li>
+        <li class="tip"> <img src="" class="tipIcon"> <p class="zhishu-su"></p><p class="zhishu">感冒</p></li>
+        <li class="tip"> <img src="" class="tipIcon"> <p class="zhishu-su"></p><p class="zhishu">旅游</p></li>
+        <li class="tip"> <img src="" class="tipIcon"><p class="zhishu-su"></p><p class="zhishu">交通</p></li>
+        <li class="tip"> <img src="" class="tipIcon"> <p class="zhishu-su"></p><p class="zhishu">空气污染扩散条件</p></li>
+        <li class="tip"> <img src="" class="tipIcon"><p  class="zhishu-su"></p><p class="zhishu">舒适度</p></li>
+        <li class="tip"> <img src="" class="tipIcon"><p  class="zhishu-su"></p><p class="zhishu">洗车</p></li>
+        <li  class="tip"> <img src="" class="tipIcon"><p  class="zhishu-su"></p><p class="zhishu">运动</p></li>
+        <li class="tip"> <img src="" class="tipIcon"><p class="zhishu-su"></p><p class="zhishu">防晒</p></li>
+        <li class="tip"> <img src="" class="tipIcon"> <p  class="zhishu-su"></p><p class="zhishu">钓鱼</p></li>
+        <li class="tip"> <img src=""class="tipIcon"> <p  class="zhishu-su"></p><p class="zhishu">晾晒</p></li>
+        <li class="tip"> <img src="" class="tipIcon"><p  class="zhishu-su"></p><p class="zhishu">化妆</p></li>
+        <li class="tip"> <img src="" class="tipIcon"><p class="zhishu-su"></p><p class="zhishu">晨练</p></li>
+        <li class="tip"> <img src="" class="tipIcon"><p class="zhishu-su"></p><p class="zhishu">过敏</p></li>
+        <li class="tip"> <img src="" class="tipIcon"><p class="zhishu-su"></p><p class="zhishu">中暑</p></li>    
+        </ul>
+        
+    </div>
+    <!-- footer -->
+    <footer>
+        <p>数据来源于中国天气网</p>
+        <p>Copyright © 1998-2021 Tencent.All Rights Reserved</p>
+    </footer>
+</div>
+    <!-- 搜索框 -->
+<div class="newse">
+    <div class="sear-input">
+        <i> <img src="./fdj.svg" ></i>
+        <input type="search" placeholder="搜索地区" class="input" >
+        <a class="btncancel">取消</a>
+    </div>
+    <div class="history-com">
+    <div class="history">
+       <img src="./delete.png" class="delete">
+        <p class="title">历史记录</h3>
+        <ul class="list">
+            <li class="li"></li>
+        </ul>
+    </div>
+    <p class="title">热门城市</p>
+    <ul class="ls-city">
+        <li class="opt-city">北京</li>
+        <li class="opt-city">上海</li>
+        <li class="opt-city">广州</li>
+        <li class="opt-city">深圳</li>
+        <li class="opt-city">郑州</li>
+        <li class="opt-city">西安</li>
+        <li class="opt-city">南京</li>
+        <li class="opt-city">杭州</li>
+        <li class="opt-city">武汉</li>
+        <li class="opt-city">成都</li>
+        <li class="opt-city">沈阳</li>
+        <li class="opt-city">天津</li>
+    </ul>
+</div> 
+</div>
+ <!-- 背景虚化 -->
+<div id="bgchange">
+
+</div>
+    <!-- 生活指数建议框 -->
+<div id="newWindow">
+    <h5 id="txtzhishu"></h5>
+    <p id="txtsu"></p>
+    <button class="newBtn" style="background-color: rgb(193,164,224);">我知道了</button>
+</div>
+<!-- 空气指数建议框 -->
+    <div class="airTxt">
+        <div class="airbgc" style="background-image: url(./airbgc.png);">
+         <p style="color: #ffffff; text-align: center; padding-top: 8vh;">空气质量指数</p>
+         <p class="air1" style="font-size: 3.5rem; text-align: center;color: #ffffff;"></p>
+         <div style="text-align: center;">
+         <button class="air2"></button>
+     </div>
+ </div>
+         <div class="airtip">
+             <ul class="airUl">
+                 <li class="airLi"><p class="airP"></p><p class="airPP">PM2.5</p></li>
+                 <li class="airLi"><p class="airP"></p><p class="airPP">PM10</p></li>
+                 <li class="airLi"><p class="airP"></p><p class="airPP">SO2</p></li>
+                 <li class="airLi"><p class="airP"></p><p class="airPP">NO2</p></li>
+                 <li class="airLi"><p class="airP"></p><p class="airPP">O3</p></li>
+                 <li class="airLi"><p class="airP"></p><p class="airPP">CO</p></li>
+                
+             </ul>
+         </div>
+         <img src="./yuancha.png" class="yuancha">
+     </div>
+     <!-- 分享框 -->
+     <div id="share">
+        <div id="shareWindow">
+            <div>
+            <img src="./images/wechat.png" >
+            <p>微信</p>
+        </div>
+        <div>
+                <img src="./images/pengyouquan.png" >
+                <p>朋友圈</p>
+            </div>
+            <div>
+            <img src="./images/qq.png" >
+            <p>QQ</p>
+        </div>
+        <div>
+            <img src="./images/qqspace.png" alt="">
+            <p>QQ空间</p>
+        </div>
+        <div>
+            <img src="./images/weibo.png" alt="">
+            <p>新浪微博</p>
+        </div>
+        </div>
+            <button id="shareBtn">取消</button>
+        </div>
+<script src="./demo.js"></script>
+</body> 
+<!-- <img src="定位.svg" alt=""> -->
+</html>

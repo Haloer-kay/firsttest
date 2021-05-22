@@ -1,0 +1,474 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size:16px ;
+    background-color: #f4f4f4;
+}
+#top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.top1>img,.tc>img,.tc>span{
+    width: 22px;
+    height: 22px;
+    position: relative;
+    top: 10px;
+}
+.tc{
+    position: absolute;
+    left: 42vw;
+    width: 40vw;
+    font-size: 16px;
+    color: #ffffff;
+}
+.share{
+    position: absolute;
+    left: 85vw;
+}
+#text{
+    width:100rem;
+    height:90rem
+}
+
+/* body{
+    background: url("mbac.png") top center no-repeat;
+    background-size: cover;
+} */
+
+#btn{
+    height:5vh;
+}
+.main1{
+    color: #ffffff;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin-top: 15vh;
+}
+.main1>p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.main1 div p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.bgc{
+    background: url("mbac.png") top center no-repeat;
+    background-size: cover;
+    /* height:0; */
+    top: 0;
+    height: 75vh;
+
+}
+.air{
+    height: 7vh;
+    width: 10.3vw;
+    position: absolute;
+    top: 10vh;
+    left: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: #a3d765;
+    border: none;
+    color: #ffffff;
+    font-size: 12px;
+}
+section>div>div>p{
+    display: table-cell;
+    padding: 5px;
+    left: 10px;
+}
+
+img{
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    padding-top: 0;
+    margin-top: 0;
+}
+.jm{
+    background-color: #ffffff;
+    height: 10vh;
+    width: 100vw;
+    margin-top: 0;
+}
+.img1{
+    position: absolute;
+    left: 38.8vw;
+}
+.img2{
+    position: absolute;
+    left: 88.5vw;
+}
+.mingtian{
+    position: absolute;
+    left: 55.5vw;
+}
+.tomTem{
+    position: absolute;
+    left: 83.3vw;
+}
+.tomWea{
+    position: absolute;
+    left: 55.5vw;
+}
+.todTem{
+    position: absolute;
+    left: 20vw;
+}
+#top{
+   visibility: hidden;
+}
+.everhour{
+    background-color: #ffffff;
+    margin-top: 1.5vh;
+    height: 17vh;  
+    overflow-x:auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1.5vh;
+}
+ol{
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+li{
+   /* float: left; */
+   list-style: none;
+   width: 60vw;
+}
+.txt-time{
+    font-size: 13px;
+    color: #999999;
+}
+.txt-degree{
+    padding-left: 4px;
+    padding-top: 4px;
+    align-items: center;
+    font-size: 14px;
+}
+.txt-time,.icon,.txt-degree{
+    margin-top: 1.5vh;
+}
+.weaday{
+    margin-top: 3px;
+    font-size: 1rem;
+}
+.newse{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    padding: 0;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+.sear-input input{
+    display: inline-block;
+    width: 80vw;
+    border-radius: 44px;
+    height: 5vh;
+    text-indent: 8vw;
+    border: none;
+    outline: none;
+    margin-left: 0;   
+   margin-left: 10px;
+   margin-top: 1vh;
+   background-color: #f4f4f4;
+}
+.sear-input i{
+    position: absolute;
+    left: 4vw;
+    top: 1.5vh;
+}
+.btncancel{
+    margin-left: 4vw;
+    font-size: 14px;
+}
+.opt-city{
+    box-sizing: border-box;
+    background: #f2f2f2;
+    border-radius: 44px;
+    padding: 0 16px;
+    width: 30%;
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #434343;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 2%;
+    /* margin-right: 2%; */
+}
+.ls-city li{
+    box-sizing: border-box;
+    display: list-item;
+}
+.list,.ls-city{
+    padding: 0;
+}
+.title{
+    margin-left: 4vw;
+    margin-top: 4vh;
+}
+#btn-clean{
+    float: right;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+.charts{
+    background-color: #ffffff;
+    margin-top: 1.5vh;
+    height: 50vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1.5vh;
+    padding-left: 2vw;
+}
+.delete{
+    float: right;
+    width:1rem;
+    height: 1rem;
+    margin-top: 0.5vh;
+    margin-right: 5vw;
+}
+
+.weather{
+    font-size: 1px;
+    line-height:1rem;
+}
+.echarts{
+    position:absolute;
+    /* 120vw原来的 */
+    width: 95vw;
+    height: 20vh;
+    top: 120vh;
+    float: left;
+    overflow-x: hidden;
+    /* margin-top: 5vh; */
+    padding-top: 0;
+    margin-bottom: 10vh;
+    display: block;
+}
+.icon1{
+    margin-top: 20vh;
+}
+.tip0{
+    margin-top: 10px;
+    /* flex-direction: row; */
+
+    overflow-x: auto;
+}
+.tip{
+    background-color: #fff;
+    float: left;
+    text-align: center;
+    width: 25vw;
+    height: 94px;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    /* overflow-x: auto; */
+}
+footer{
+    padding: 15px 0;
+}
+
+footer p{
+    text-align: center;
+    font-size: 0.3rem;
+    color: #b2b2b2;
+}
+.tipUl{
+    transition-property: transform;
+    left: 0px;
+    transition-duration: 0ms;
+    transform: translate(0px, 0px) translateZ(0px)
+}
+.tipIcon{
+    width: 27px;
+    height: 27px;
+    margin: 15px auto 2px
+}
+.item{
+    font-size: 0.8rem;
+}
+.item .day,.date ,.wind ,.wind_speed{
+    color: #999999;
+    
+}
+.tipUl>img{
+   margin-top: 10px;
+    
+}
+.zhishu{
+    font-size: 0.5rem;
+    color: #999999;
+}
+#bgchange{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.43);
+    z-index: 999;
+    backdrop-filter: blur(2px);
+}
+#newWindow{
+    display: none;
+    border-radius: 8px;
+    background: #fff;
+    padding-bottom: 20px;
+    position: fixed;
+    width: 250px;
+    left: 50%;
+    top: 33%;
+    margin-left: -125px;
+    z-index: 1000;
+    height: 250px;
+}
+.newBtn{
+    position: fixed;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    color: #ffffff;
+    height: 45px;
+    margin: 0 auto;
+    position: fixed;
+    left: 25%;
+    top: 60%;
+    width: 50vw;
+}
+#newWindow h5{
+    color: #ffffff;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    background-color: rgb(193,164,224);
+    font-size: 2rem;
+    border-radius:8px 8px 0 0;
+}
+#newWindow p{
+    margin: 20px 20px 0 20px;
+}
+.zhishu-su{
+    margin-top: 0;
+    padding-top:0;
+    font-size: 0.9rem;
+}
+.airbgc{
+    width: 250px;
+    height: 40vh;
+    border-radius: 8px 8px 0 0;
+}
+.airTxt{
+    display: none;
+    border-radius: 8px 8px;
+    background: #fff;
+    padding-bottom: 20px;
+    position: fixed;
+    width: 250px;
+    left: 50%;
+    top: 20%;
+    margin-left: -125px;
+    z-index: 1000;
+    height: 400px;
+}
+.airLi{
+    background-color: #fff;
+    float: left;
+    text-align: center;
+    width: 22.2vw;
+    height: 64px;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    box-sizing: border-box;
+}
+.yuancha{
+   position: absolute;
+   top: 3vh;
+    left: 58vw;
+    width: 15px;
+    height: 15px;
+    font-size: 3rem;
+}
+.airPP{
+    font-size: 0.4rem;
+    color: #999999;
+}
+.airP{
+    font-size: 1rem;
+    margin-top: 2vh;
+}
+#share{
+    display: none;
+    height: 20vh;
+    width: 100vw;
+    top: 80%;
+    z-index: 1000;
+    position: absolute;
+    top: 80vh;
+}
+#shareWindow{
+    width: 100vw;
+    height: 12vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3vh;
+    padding-bottom: 0;
+    z-index: 1000;
+}
+#shareWindow img{
+    width: 10vw;
+    height: 5vh;
+}
+#shareWindow P{
+    font-size: 0.6rem;
+    text-align: center;
+}
+#shareBtn{
+    width: 100vw;
+    background-color:#ffffff;
+    height: 10vh;
+    top: 0vh;
+    border:none;
+    border-radius: 3px;
+    font-size: 1.2rem;
+}
+.air2{
+    background-color: #F0CC35;
+     margin:0 auto;
+     margin-top: 2vh;
+      border: none;
+      width: 50px; 
+      border-radius: 3px; 
+      color: #ffffff;
+      font-size: 1rem;
+}
